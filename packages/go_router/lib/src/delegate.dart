@@ -97,9 +97,9 @@ class GoRouterDelegate extends RouterDelegate<RouteMatchList>
 
   NavigatorState? _findCurrentNavigator() {
     NavigatorState? state;
-    if (navigatorKey.currentState?.canPop() ?? false) {
-      state = navigatorKey.currentState;
-    }
+    // if (navigatorKey.currentState?.canPop() ?? false) {
+    //   state = navigatorKey.currentState;
+    // }
     RouteMatchBase walker = currentConfiguration.matches.last;
     while (walker is ShellRouteMatch) {
       final NavigatorState potentialCandidate =
